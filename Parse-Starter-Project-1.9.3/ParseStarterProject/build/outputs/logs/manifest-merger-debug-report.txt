@@ -14,7 +14,7 @@ ADDED from AndroidManifest.xml:2:1
 uses-sdk
 ADDED from AndroidManifest.xml:7:5
 	android:targetSdkVersion
-		ADDED from AndroidManifest.xml:7:41
+		ADDED from AndroidManifest.xml:7:42
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
 	android:minSdkVersion
@@ -67,3 +67,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:30:17
 	android:name
 		ADDED from AndroidManifest.xml:30:27
+activity#com.parse.starter.SignUpActivity
+ADDED from AndroidManifest.xml:33:9
+	android:name
+		ADDED from AndroidManifest.xml:33:19

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/userLabel"
+                android:text="Create Username"
+                />
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:id="@+id/newUser"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/passLabel"
+                android:text="Create Password"
+                />
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:id="@+id/newPass"/>
+        </TableRow>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/createBtn"
+            android:text="Create"/>
+    </TableLayout>
+</LinearLayout>
