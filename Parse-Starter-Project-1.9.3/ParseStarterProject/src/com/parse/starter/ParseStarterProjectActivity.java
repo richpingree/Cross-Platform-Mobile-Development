@@ -14,9 +14,7 @@ public class ParseStarterProjectActivity extends Activity implements LoginSignUp
 
 		ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
-//		ParseObject testObject = new ParseObject("TestObject");
-//		testObject.put("foo", "bar");
-//		testObject.saveInBackground();
+
 
         if(savedInstanceState == null){
             getFragmentManager().beginTransaction().replace(R.id.container, new LoginSignUpFragment()).commit();
