@@ -67,3 +67,11 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:30:17
 	android:name
 		ADDED from AndroidManifest.xml:30:27
+activity#com.parse.starter.ListActivtiy
+ADDED from AndroidManifest.xml:33:9
+	android:name
+		ADDED from AndroidManifest.xml:33:19
+activity#com.parse.starter.HeroFormActivity
+ADDED from AndroidManifest.xml:34:9
+	android:name
+		ADDED from AndroidManifest.xml:34:19

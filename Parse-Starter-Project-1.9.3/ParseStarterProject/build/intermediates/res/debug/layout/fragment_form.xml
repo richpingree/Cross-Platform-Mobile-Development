@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow android:padding="15dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="Hero Name"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:id="@+id/heroName"/>
+        </TableRow>
+
+        <TableRow android:padding="15dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="Hero Id"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:id="@+id/heroId"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <TableRow>
+
+           <Button
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="Cancel"
+               android:id="@+id/cancelBtn"/>
+
+           <Button
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="Save"
+               android:id="@+id/saveBtn"/>
+       </TableRow>
+    </TableLayout>
+
+</LinearLayout><!-- From: file:/Users/richardpingree/Cross-Platform-Mobile-Development/Parse-Starter-Project-1.9.3/ParseStarterProject/res/layout/fragment_form.xml -->

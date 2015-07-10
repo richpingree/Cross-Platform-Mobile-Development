@@ -31,6 +31,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ListActivtiy"/>
+        <activity android:name=".HeroFormActivity"/>
     </application>
 
 </manifest>

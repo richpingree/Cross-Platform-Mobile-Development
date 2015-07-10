@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container">
+
+</LinearLayout><!-- From: file:/Users/richardpingree/Cross-Platform-Mobile-Development/Parse-Starter-Project-1.9.3/ParseStarterProject/res/layout/form_activity.xml -->

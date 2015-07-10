@@ -1,6 +1,7 @@
 package com.parse.starter.Fragments;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
+import com.parse.starter.ListActivtiy;
 import com.parse.starter.R;
 
 /**
@@ -63,6 +65,8 @@ public class LoginSignUpFragment extends Fragment {
                     @Override
                     public void done(ParseUser parseUser, ParseException e) {
                         if (parseUser != null){
+                            Intent loginIntent = new Intent(getActivity(), ListActivtiy.class);
+                            startActivity(loginIntent);
                             Toast.makeText(getActivity(),"Successfully Logged In", Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(getActivity(), "No such user exist, please signup", Toast.LENGTH_LONG).show();
