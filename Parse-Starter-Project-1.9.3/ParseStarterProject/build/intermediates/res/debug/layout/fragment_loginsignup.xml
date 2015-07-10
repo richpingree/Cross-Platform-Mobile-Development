@@ -28,7 +28,8 @@
             <EditText
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:id="@+id/password"/>
+                android:id="@+id/password"
+                android:password="true"/>
         </TableRow>
 
         <Button
@@ -46,4 +47,4 @@
             android:text="Sign up"/>
     </TableLayout>
 
-</LinearLayout><!-- From: file:/Users/richardpingree/Cross-Platform-Mobile-Development/Parse-Starter-Project-1.9.3/ParseStarterProject/res/layout/fragment_login.xml -->
+</LinearLayout><!-- From: file:/Users/richardpingree/Cross-Platform-Mobile-Development/Parse-Starter-Project-1.9.3/ParseStarterProject/res/layout/fragment_loginsignup.xml -->

@@ -17,7 +17,7 @@ public class ParseApplication extends Application {
     ParseCrashReporting.enable(this);
 
     // Enable Local Datastore.
-    Parse.enableLocalDatastore(this);
+    //Parse.enableLocalDatastore(this);
 
     // Add your initialization code here
     Parse.initialize(this, "iwzGFJskUeY3kd999rtqLsTn3nGdQnbMytC9L5dG", "HMILVIKqlmvSMBPbsEPNiH3ds0y7t3qmYdzQhtBM");
