@@ -8,7 +8,7 @@ import com.parse.ParseObject;
 import com.parse.starter.Fragments.DetailFragment;
 
 /**
- * Created by richardpingree on 7/10/15.
+ * Created by Richard Pingree CPM1507 on 7/10/15.
  */
 public class DetailActivity extends Activity implements DetailFragment.DetailListener{
 

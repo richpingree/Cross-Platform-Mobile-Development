@@ -12,7 +12,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by richardpingree on 7/10/15.
+ * Created by Richard Pingree CPM1507 on 7/10/15.
  */
 public class ListActivtiy extends Activity implements ListFragment.HeroListener{
 

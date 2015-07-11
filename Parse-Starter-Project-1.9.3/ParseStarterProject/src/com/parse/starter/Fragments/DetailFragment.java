@@ -12,7 +12,7 @@ import com.parse.ParseObject;
 import com.parse.starter.R;
 
 /**
- * Created by richardpingree on 7/10/15.
+ * Created by Richard Pingree CPM1507 on 7/10/15.
  */
 public class DetailFragment extends Fragment {
 
