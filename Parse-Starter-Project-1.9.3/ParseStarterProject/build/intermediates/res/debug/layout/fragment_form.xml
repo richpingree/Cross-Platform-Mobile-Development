@@ -37,6 +37,20 @@
                 android:id="@+id/heroId"/>
         </TableRow>
 
+        <TableRow android:padding="15dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="Birth Year"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:id="@+id/heroYear"/>
+        </TableRow>
     </TableLayout>
 
     <TableLayout

@@ -34,6 +34,7 @@
         </activity>
         <activity android:name="com.parse.starter.ListActivtiy" />
         <activity android:name="com.parse.starter.HeroFormActivity" />
+        <activity android:name="com.parse.starter.DetailActivity" />
     </application>
 
 </manifest>

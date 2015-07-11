@@ -32,6 +32,7 @@
         </activity>
         <activity android:name=".ListActivtiy"/>
         <activity android:name=".HeroFormActivity"/>
+        <activity android:name=".DetailActivity"/>
     </application>
 
 </manifest>
