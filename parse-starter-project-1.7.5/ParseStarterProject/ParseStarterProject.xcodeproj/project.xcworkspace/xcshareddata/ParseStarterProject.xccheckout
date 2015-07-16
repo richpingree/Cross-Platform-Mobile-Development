@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8250BFFB-687C-42C8-9502-02250BA28926</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ParseStarterProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BB3E721129B1A5CBC5A02B4C1AE1BBF7D5F20CEB</key>
+		<string>https://github.com/richpingree/Cross-Platform-Mobile-Development.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>parse-starter-project-1.7.5/ParseStarterProject/ParseStarterProject.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BB3E721129B1A5CBC5A02B4C1AE1BBF7D5F20CEB</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/richpingree/Cross-Platform-Mobile-Development.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BB3E721129B1A5CBC5A02B4C1AE1BBF7D5F20CEB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BB3E721129B1A5CBC5A02B4C1AE1BBF7D5F20CEB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Cross-Platform-Mobile-Development</string>
+		</dict>
+	</array>
+</dict>
+</plist>
