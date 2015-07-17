@@ -20,7 +20,7 @@
 - (IBAction)signedUpButton:(id)sender;
 
 - (IBAction)loginButton:(id)sender;
-@property (weak, nonatomic) IBOutlet UITextField *loginUsername;
-@property (weak, nonatomic) IBOutlet UITextField *loginPassword;
+@property (weak, nonatomic) IBOutlet UITextField *loginUsernameField;
+@property (weak, nonatomic) IBOutlet UITextField *loginPasswordField;
 
 @end

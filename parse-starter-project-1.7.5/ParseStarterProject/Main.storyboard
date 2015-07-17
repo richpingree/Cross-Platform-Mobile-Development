@@ -83,7 +83,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o7B-Yo-n2L">
-                                <rect key="frame" x="41" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="600" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="La3-cf-VHz">
                                         <rect key="frame" x="16" y="57" width="300" height="30"/>
@@ -93,7 +93,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c8M-YL-Kao">
                                         <rect key="frame" x="16" y="95" width="300" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZl-bK-uIv">
                                         <rect key="frame" x="143" y="140" width="46" height="30"/>
@@ -112,8 +112,8 @@
                     </view>
                     <connections>
                         <outlet property="loginOverlayView" destination="o7B-Yo-n2L" id="QNp-7G-o7R"/>
-                        <outlet property="loginPassword" destination="c8M-YL-Kao" id="eif-89-SU3"/>
-                        <outlet property="loginUsername" destination="La3-cf-VHz" id="cev-qH-FyO"/>
+                        <outlet property="loginPasswordField" destination="c8M-YL-Kao" id="KUZ-Ce-BFK"/>
+                        <outlet property="loginUsernameField" destination="La3-cf-VHz" id="3Ft-Be-ra1"/>
                         <outlet property="passwordField" destination="I7P-Pj-5EZ" id="G7W-lZ-dmX"/>
                         <outlet property="reEnterPasswordField" destination="xQF-AM-XMW" id="stH-NO-fgL"/>
                         <outlet property="usernameField" destination="UcG-Ai-W33" id="0wf-8o-mD8"/>

@@ -51,15 +51,6 @@
     
 }
 
-- (IBAction)signedUpButton:(id)sender {
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        _loginOverlayView.frame = self.view.frame;
-    }];
-}
-
-- (IBAction)loginButton:(id)sender {
-}
 
 - (void) checkFieldComplete{
     if ([_usernameField.text isEqualToString:@""] || [_passwordField.text isEqualToString:@""] || [_reEnterPasswordField.text isEqualToString:@""] ) {
@@ -102,5 +93,27 @@
         }
     }];
 }
+
+- (IBAction)signedUpButton:(id)sender {
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        _loginOverlayView.frame = self.view.frame;
+    }];
+}
+
+- (IBAction)loginButton:(id)sender {
+    [PFUser logInWithUsernameInBackground:_loginUsernameField.text password:_loginPasswordField.text block:^(PFUser *user, NSError *error){
+        if (!error) {
+            NSLog(@"Login Successful!");
+            [self performSegueWithIdentifier:@"login" sender:self];
+        }
+        if (error) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ooops!" message:@"Username already taken!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil ];
+            [alert show];
+            
+        }
+    }];
+}
+
 
 @end
