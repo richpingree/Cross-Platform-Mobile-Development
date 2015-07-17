@@ -30,4 +30,8 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)logoutButton:(id)sender {
+    [PFUser logOut];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
