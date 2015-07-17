@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIView *loginOverlayView;
 
 - (IBAction)signUpAction:(id)sender;
-- (IBAction)signedUpButton:(id)sender;
+
 
 - (IBAction)loginButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *loginUsernameField;

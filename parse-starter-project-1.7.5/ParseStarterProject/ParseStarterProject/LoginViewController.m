@@ -47,6 +47,11 @@
     [_usernameField resignFirstResponder];
     [_passwordField resignFirstResponder];
     [_reEnterPasswordField resignFirstResponder];
+    _loginUsernameField.text = nil;
+    _loginPasswordField.text = nil;
+    _usernameField.text = nil;
+    _passwordField.text = nil;
+    _reEnterPasswordField.text = nil;
     [self checkFieldComplete];
     
 }
@@ -84,6 +89,7 @@
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
         if (!error) {
             NSLog(@"Sign Up success!");
+            
             [self performSegueWithIdentifier:@"login" sender:self];
         }
         else{
@@ -94,21 +100,21 @@
     }];
 }
 
-- (IBAction)signedUpButton:(id)sender {
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        _loginOverlayView.frame = self.view.frame;
-    }];
-}
+
 
 - (IBAction)loginButton:(id)sender {
     [PFUser logInWithUsernameInBackground:_loginUsernameField.text password:_loginPasswordField.text block:^(PFUser *user, NSError *error){
         if (!error) {
             NSLog(@"Login Successful!");
+            _loginUsernameField.text = nil;
+            _loginPasswordField.text = nil;
+            _usernameField.text = nil;
+            _passwordField.text = nil;
+            _reEnterPasswordField.text = nil;
             [self performSegueWithIdentifier:@"login" sender:self];
         }
         if (error) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ooops!" message:@"Username already taken!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil ];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ooops!" message:@"Username blank or already taken!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil ];
             [alert show];
             
         }
