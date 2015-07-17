@@ -7,7 +7,12 @@
 #import <UIKit/UIKit.h>
 #import "Parse/Parse.h"
 
-@interface ParseStarterProjectViewController : UIViewController
+@interface ParseStarterProjectViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
+    NSMutableArray *objectArray;
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 - (IBAction)logoutButton:(id)sender;
 
 @end
