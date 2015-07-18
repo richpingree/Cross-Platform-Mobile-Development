@@ -64,8 +64,11 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [objectArray removeObjectAtIndex:indexPath.row];
-//        PFObject *tempObject = [objectArray objectAtIndex:indexPath.row];
-//        [tempObject deleteInBackground];
+        PFObject *tempObject = [objectArray objectAtIndex:indexPath.row];
+        //[tempObject deleteInBackground];
+        [tempObject deleteInBackgroundWithBlock:^(BOOL successed, NSError *error){
+            
+        }];
         
         [tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         }

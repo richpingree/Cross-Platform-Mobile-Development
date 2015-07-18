@@ -47,12 +47,13 @@
     [_usernameField resignFirstResponder];
     [_passwordField resignFirstResponder];
     [_reEnterPasswordField resignFirstResponder];
+
+    [self checkFieldComplete];
     _loginUsernameField.text = nil;
     _loginPasswordField.text = nil;
     _usernameField.text = nil;
     _passwordField.text = nil;
     _reEnterPasswordField.text = nil;
-    [self checkFieldComplete];
     
 }
 
