@@ -17,9 +17,6 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     
-    //objectArray = [[NSMutableArray alloc] initWithObjects:@"hello", @"taco",  nil];
-    
-    //_myTableView.editing = true;
     
     [self performSelector:@selector(retrieveFromParse)];
     [super viewDidLoad];
@@ -55,13 +52,23 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)editButton:(id)sender {
+    myTableView.editing = !myTableView.isEditing;
+}
+
+- (IBAction)refreshButton:(id)sender {
+    [self performSelector:@selector(retrieveFromParse)];
+}
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [objectArray removeObjectAtIndex:indexPath.row];
+//        PFObject *tempObject = [objectArray objectAtIndex:indexPath.row];
+//        [tempObject deleteInBackground];
         
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    }
+        [tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -77,6 +84,7 @@
         PFObject *tempObject = [objectArray objectAtIndex:indexPath.row];
         
         cell.textLabel.text = [tempObject objectForKey:@"Name"];
+        cell.detailTextLabel.text = [tempObject objectForKey:@"Id"];
     }
     return cell;
 }

@@ -22,6 +22,7 @@
 		09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
 		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
+		707FA6521B59C0F2003DF272 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 707FA6511B59C0F2003DF272 /* AddViewController.m */; };
 		70CE562D1B5728C3003588E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70CE562C1B5728C3003588E3 /* Main.storyboard */; };
 		70CE56711B589280003588E3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CE56701B589280003588E3 /* LoginViewController.m */; };
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
@@ -64,6 +65,8 @@
 		6372FF521613CC3C002132AF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		6372FF551613CC42002132AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		6372FF571613CC47002132AF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		707FA6501B59C0F2003DF272 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		707FA6511B59C0F2003DF272 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		70CE562C1B5728C3003588E3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		70CE566F1B589280003588E3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		70CE56701B589280003588E3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 				09ABC07813A1D52D009C3FCF /* Supporting Files */,
 				70CE566F1B589280003588E3 /* LoginViewController.h */,
 				70CE56701B589280003588E3 /* LoginViewController.m */,
+				707FA6501B59C0F2003DF272 /* AddViewController.h */,
+				707FA6511B59C0F2003DF272 /* AddViewController.m */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				707FA6521B59C0F2003DF272 /* AddViewController.m in Sources */,
 				70CE56711B589280003588E3 /* LoginViewController.m in Sources */,
 				09ABC07F13A1D52D009C3FCF /* main.m in Sources */,
 				09ABC08213A1D52D009C3FCF /* ParseStarterProjectAppDelegate.m in Sources */,
