@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.parse.ParseObject;
 import com.parse.starter.Fragments.DetailFragment;
 import com.parse.starter.Fragments.ListFragment;
 
@@ -16,7 +17,7 @@ public class DetailActivity extends Activity implements DetailFragment.DetailLis
     private String heroName;
     private String heroId;
     private int heroYear;
-    //private int heroYear;
+    private String objectID;
 
     public static final String HEROEXTRA = "Hero";
 
@@ -35,6 +36,8 @@ public class DetailActivity extends Activity implements DetailFragment.DetailLis
             heroId = detailIntent.getStringExtra(ListFragment.HEROID);
             //heroYear = detailIntent.getStringExtra(ListFragment.HEROYEAR);
             heroYear = detailIntent.getIntExtra(ListFragment.HEROYEAR, 0);
+            objectID = detailIntent.getStringExtra(ListFragment.OBJECTID);
+
 
 
             Log.i("details", heroName + " " + heroId + " " + heroYear);
@@ -60,12 +63,15 @@ public class DetailActivity extends Activity implements DetailFragment.DetailLis
     }
 
     @Override
-    public int getDelete() {
-        return 0;
+    public String getCurrentObjectId() {
+        return objectID;
     }
+
 
     @Override
     public void deleteEntry() {
+        ParseObject.createWithoutData("Hero", objectID).deleteInBackground();
+        finish();
 
     }
 }

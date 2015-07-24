@@ -44,18 +44,7 @@ public class ListActivtiy extends Activity implements ListFragment.HeroListener{
         }
     }
 
-    @Override
-    public void viewHero(int position) {
-//        Intent detailIntent = new Intent(this, DetailActivity.class);
-//        detailIntent.putExtra(DetailActivity.HEROEXTRA, (Serializable) list.get(position));
-//        startActivity(detailIntent);
-//
-    }
 
-    @Override
-    public void deleteHero(int position) {
-
-    }
 
     @Override
     public void addHero() {

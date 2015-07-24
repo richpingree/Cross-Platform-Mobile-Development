@@ -1,6 +1,9 @@
 package com.parse.starter;
 
 import android.app.Activity;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 
 import com.parse.ParseAnalytics;
@@ -23,4 +26,14 @@ public class ParseStarterProjectActivity extends Activity implements LoginSignUp
         }
 	}
 
+    @Override
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        if (netInfo != null && netInfo.isConnectedOrConnecting()){
+            return true;
+        }else {
+            return false;
+        }
+    }
 }

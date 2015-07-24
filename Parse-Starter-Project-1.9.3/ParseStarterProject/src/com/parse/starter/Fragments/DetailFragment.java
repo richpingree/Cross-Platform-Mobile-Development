@@ -6,8 +6,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
+import com.parse.GetCallback;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 import com.parse.starter.R;
 
 /**
@@ -18,12 +22,13 @@ public class DetailFragment extends Fragment {
     private DetailListener mListener;
 
     EditText heroNameText, heroIdText, heroYearText;
+    Button updateBtn, deleteBtn;
 
     public interface DetailListener{
         public String getHeroName();
         public String getHeroId();
         public String getHeroYear();
-        public int getDelete();
+        public String getCurrentObjectId();
         public void deleteEntry();
     }
 
@@ -60,6 +65,42 @@ public class DetailFragment extends Fragment {
 
         heroYearText = (EditText)getView().findViewById(R.id.detailYear);
         heroYearText.setText(mListener.getHeroYear());
+
+        updateBtn = (Button)getView().findViewById(R.id.updateBtn);
+        updateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ParseQuery<ParseObject> query = ParseQuery.getQuery("Hero");
+
+                // Retrieve the object by id
+                query.getInBackground(mListener.getCurrentObjectId(), new GetCallback<ParseObject>() {
+                    @Override
+                    public void done(ParseObject parseObject, com.parse.ParseException e) {
+                        if (e == null){
+                            parseObject.put("Name", heroNameText.getText().toString());
+                            parseObject.put("Id", heroIdText.getText().toString());
+                            parseObject.put("Year", Integer.valueOf(heroYearText.getText().toString()));
+                            parseObject.saveEventually();
+
+                        }
+                    }
+
+                });
+
+                getActivity().finish();
+
+
+            }
+        });
+
+        deleteBtn = (Button)getView().findViewById(R.id.deleteBtn);
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.deleteEntry();
+            }
+        });
 
 
     }

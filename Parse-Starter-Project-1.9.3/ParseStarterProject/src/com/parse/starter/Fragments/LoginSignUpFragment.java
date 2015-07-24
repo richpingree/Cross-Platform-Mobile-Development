@@ -31,6 +31,7 @@ public class LoginSignUpFragment extends Fragment {
 
 
     public interface LoginListener{
+        public boolean isOnline();
 
     }
 
@@ -68,22 +69,28 @@ public class LoginSignUpFragment extends Fragment {
                 userNameTxt = userName.getText().toString();
                 passwordTxt = pass.getText().toString();
 
-                ParseUser.logInInBackground(userNameTxt, passwordTxt, new LogInCallback() {
-                    @Override
-                    public void done(ParseUser parseUser, ParseException e) {
-                        if (parseUser != null){
+//                if (mListener.isOnline()){
+                    ParseUser.logInInBackground(userNameTxt, passwordTxt, new LogInCallback() {
+                        @Override
+                        public void done(ParseUser parseUser, ParseException e) {
+                            if (parseUser != null){
 //                            Intent loginIntent = new Intent(getActivity(), ListActivtiy.class);
 //                            startActivity(loginIntent);
-                            loginMethod();
+                                loginMethod();
 
-                            Toast.makeText(getActivity(),"Successfully Logged In", Toast.LENGTH_LONG).show();
-                            userName.setText("");
-                            pass.setText("");
-                        } else {
-                            Toast.makeText(getActivity(), "No such user exist, please signup", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getActivity(),"Successfully Logged In", Toast.LENGTH_LONG).show();
+                                userName.setText("");
+                                pass.setText("");
+                            } else {
+                                Toast.makeText(getActivity(), "No such user exist, please signup", Toast.LENGTH_LONG).show();
+                            }
                         }
-                    }
-                });
+                    });
+//                } else{
+//                    Toast.makeText(getActivity(), "No Network Connection!", Toast.LENGTH_SHORT).show();
+//                }
+
+
 
             }
         });

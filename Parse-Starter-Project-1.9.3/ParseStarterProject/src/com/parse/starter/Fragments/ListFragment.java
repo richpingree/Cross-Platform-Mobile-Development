@@ -15,7 +15,6 @@ import android.widget.TextView;
 import com.parse.ParseObject;
 import com.parse.ParseQueryAdapter;
 import com.parse.ParseUser;
-import com.parse.starter.CustomAdapter;
 import com.parse.starter.DetailActivity;
 import com.parse.starter.R;
 
@@ -31,18 +30,16 @@ public class ListFragment extends Fragment{
     public static final String HERONAME = "Hero Name";
     public static final String HEROID = "Hero Id";
     public static final String HEROYEAR = "Hero Year";
+    public static final String OBJECTID = "Object ID";
     private HeroListener mListener;
     TextView userTxt;
     Button logoutBtn, addBtn;
     ListView heroListView;
     ParseQueryAdapter<ParseObject> mainAdapter;
-    CustomAdapter heroAdapter;
     ParseObject selectedObject;
 
 
     public interface HeroListener{
-        public void viewHero(int position);
-        public void deleteHero(int position);
         public void addHero();
     }
 
@@ -114,9 +111,6 @@ public class ListFragment extends Fragment{
     public void updateList() throws IOException{
         mainAdapter = new ParseQueryAdapter<ParseObject>(getActivity(), "Hero");
         mainAdapter.setTextKey("Name");
-        //mainAdapter.setTextKey("Year");
-
-        heroAdapter = new CustomAdapter(getActivity());
 
         heroListView.setAdapter(mainAdapter);
         mainAdapter.loadObjects();
@@ -129,11 +123,13 @@ public class ListFragment extends Fragment{
                 String currentName = selectedObject.getString("Name");
                 String currentId = selectedObject.getString("Id");
                 int currentYear = selectedObject.getInt("Year");
+                String currentObjectId = selectedObject.getObjectId();
 
                 Intent detailIntent = new Intent(getActivity(), DetailActivity.class);
                 detailIntent.putExtra(HERONAME, currentName);
                 detailIntent.putExtra(HEROID, currentId);
                 detailIntent.putExtra(HEROYEAR, currentYear);
+                detailIntent.putExtra(OBJECTID, currentObjectId);
                 startActivity(detailIntent);
 
             }

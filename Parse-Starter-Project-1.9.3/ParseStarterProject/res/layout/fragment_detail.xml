@@ -48,10 +48,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:textAppearance="?android:textAppearanceMedium"
+                android:inputType="number"
                 android:id="@+id/detailYear"/>
 
         </TableRow>
 
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Update"
+            android:id="@+id/updateBtn"/>
 
         <Button
             android:layout_height="wrap_content"

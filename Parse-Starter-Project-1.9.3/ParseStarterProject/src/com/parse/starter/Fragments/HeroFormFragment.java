@@ -67,7 +67,7 @@ public class HeroFormFragment extends Fragment {
                 hero.put("Id", heroIdString);
                 hero.put("Year", heroBirthYear);
                 hero.setACL(new ParseACL(ParseUser.getCurrentUser()));
-                hero.saveInBackground();
+                hero.saveEventually();
                 Intent returnIntent = new Intent();
                 getActivity().setResult(Activity.RESULT_OK, returnIntent);
                 getActivity().finish();
