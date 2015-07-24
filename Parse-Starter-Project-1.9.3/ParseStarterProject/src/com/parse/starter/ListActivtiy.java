@@ -8,7 +8,6 @@ import com.parse.ParseObject;
 import com.parse.starter.Fragments.ListFragment;
 
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -47,10 +46,10 @@ public class ListActivtiy extends Activity implements ListFragment.HeroListener{
 
     @Override
     public void viewHero(int position) {
-        Intent detailIntent = new Intent(this, DetailActivity.class);
-        detailIntent.putExtra(DetailActivity.HEROEXTRA, (Serializable) list.get(position));
-        startActivity(detailIntent);
-
+//        Intent detailIntent = new Intent(this, DetailActivity.class);
+//        detailIntent.putExtra(DetailActivity.HEROEXTRA, (Serializable) list.get(position));
+//        startActivity(detailIntent);
+//
     }
 
     @Override

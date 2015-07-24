@@ -6,9 +6,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.EditText;
 
-import com.parse.ParseObject;
 import com.parse.starter.R;
 
 /**
@@ -18,8 +17,12 @@ public class DetailFragment extends Fragment {
 
     private DetailListener mListener;
 
+    EditText heroNameText, heroIdText, heroYearText;
+
     public interface DetailListener{
-        public ParseObject getHero();
+        public String getHeroName();
+        public String getHeroId();
+        public String getHeroYear();
         public int getDelete();
         public void deleteEntry();
     }
@@ -49,7 +52,15 @@ public class DetailFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        TextView textView = (TextView)getView().findViewById(R.id.detailName);
-        textView.setText(mListener.getHero().getString("Name"));
+        heroNameText = (EditText)getView().findViewById(R.id.detailName);
+        heroNameText.setText(mListener.getHeroName());
+
+        heroIdText = (EditText)getView().findViewById(R.id.detailId);
+        heroIdText.setText(mListener.getHeroId());
+
+        heroYearText = (EditText)getView().findViewById(R.id.detailYear);
+        heroYearText.setText(mListener.getHeroYear());
+
+
     }
 }

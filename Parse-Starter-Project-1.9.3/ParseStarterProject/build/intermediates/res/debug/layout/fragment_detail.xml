@@ -14,7 +14,7 @@
                 android:layout_weight="1"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:text="Hero Name:"/>
-            <TextView
+            <EditText
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:textAppearance="?android:textAppearanceMedium"
@@ -29,13 +29,29 @@
                 android:layout_weight="1"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:text="Hero Id:"/>
-            <TextView
+            <EditText
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:id="@+id/detailId"/>
 
         </TableRow>
+
+        <TableRow android:padding="15dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="Hero Birth Year:"/>
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:id="@+id/detailYear"/>
+
+        </TableRow>
+
 
         <Button
             android:layout_height="wrap_content"

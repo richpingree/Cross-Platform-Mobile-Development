@@ -34,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:textAppearance="?android:textAppearanceMedium"
+                android:inputType="textPersonName"
                 android:id="@+id/heroId"/>
         </TableRow>
 
@@ -49,6 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:textAppearance="?android:textAppearanceMedium"
+                android:inputType="number"
                 android:id="@+id/heroYear"/>
         </TableRow>
     </TableLayout>

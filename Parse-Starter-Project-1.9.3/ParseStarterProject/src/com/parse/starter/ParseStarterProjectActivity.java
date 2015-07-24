@@ -16,9 +16,11 @@ public class ParseStarterProjectActivity extends Activity implements LoginSignUp
 
 
         if(savedInstanceState == null){
-            getFragmentManager().beginTransaction().replace(R.id.container, new LoginSignUpFragment()).commit();
+			LoginSignUpFragment loginFrag = new LoginSignUpFragment();
+            getFragmentManager().beginTransaction().replace(R.id.container, loginFrag).commit();
+
+
         }
 	}
-
 
 }

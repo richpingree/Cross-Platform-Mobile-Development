@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.parse.ParseACL;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.starter.R;
@@ -65,6 +66,7 @@ public class HeroFormFragment extends Fragment {
                 hero.put("Name", heroNameString);
                 hero.put("Id", heroIdString);
                 hero.put("Year", heroBirthYear);
+                hero.setACL(new ParseACL(ParseUser.getCurrentUser()));
                 hero.saveInBackground();
                 Intent returnIntent = new Intent();
                 getActivity().setResult(Activity.RESULT_OK, returnIntent);

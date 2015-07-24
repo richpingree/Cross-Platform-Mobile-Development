@@ -54,6 +54,13 @@ public class LoginSignUpFragment extends Fragment {
         LogIn = (Button)getView().findViewById(R.id.loginBtn);
         SignUp = (Button)getView().findViewById(R.id.signUpBtn);
 
+//        ParseUser currentUser = ParseUser.getCurrentUser();
+//        if (currentUser != null){
+//            loginMethod();
+//        }else{
+//
+//        }
+
         LogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,9 +72,13 @@ public class LoginSignUpFragment extends Fragment {
                     @Override
                     public void done(ParseUser parseUser, ParseException e) {
                         if (parseUser != null){
-                            Intent loginIntent = new Intent(getActivity(), ListActivtiy.class);
-                            startActivity(loginIntent);
+//                            Intent loginIntent = new Intent(getActivity(), ListActivtiy.class);
+//                            startActivity(loginIntent);
+                            loginMethod();
+
                             Toast.makeText(getActivity(),"Successfully Logged In", Toast.LENGTH_LONG).show();
+                            userName.setText("");
+                            pass.setText("");
                         } else {
                             Toast.makeText(getActivity(), "No such user exist, please signup", Toast.LENGTH_LONG).show();
                         }
@@ -105,5 +116,14 @@ public class LoginSignUpFragment extends Fragment {
                 }
             }
         });
+    }
+
+    public void loginMethod(){
+        Intent loginIntent = new Intent(getActivity(), ListActivtiy.class);
+        startActivity(loginIntent);
+    }
+
+    public ParseUser currentUser(){
+        return ParseUser.getCurrentUser();
     }
 }
