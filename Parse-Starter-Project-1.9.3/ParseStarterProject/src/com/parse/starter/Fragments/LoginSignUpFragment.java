@@ -31,7 +31,6 @@ public class LoginSignUpFragment extends Fragment {
 
 
     public interface LoginListener{
-        public boolean isOnline();
 
     }
 
@@ -55,12 +54,6 @@ public class LoginSignUpFragment extends Fragment {
         LogIn = (Button)getView().findViewById(R.id.loginBtn);
         SignUp = (Button)getView().findViewById(R.id.signUpBtn);
 
-//        ParseUser currentUser = ParseUser.getCurrentUser();
-//        if (currentUser != null){
-//            loginMethod();
-//        }else{
-//
-//        }
 
         LogIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,13 +62,12 @@ public class LoginSignUpFragment extends Fragment {
                 userNameTxt = userName.getText().toString();
                 passwordTxt = pass.getText().toString();
 
-//                if (mListener.isOnline()){
+
                     ParseUser.logInInBackground(userNameTxt, passwordTxt, new LogInCallback() {
                         @Override
                         public void done(ParseUser parseUser, ParseException e) {
                             if (parseUser != null){
-//                            Intent loginIntent = new Intent(getActivity(), ListActivtiy.class);
-//                            startActivity(loginIntent);
+
                                 loginMethod();
 
                                 Toast.makeText(getActivity(),"Successfully Logged In", Toast.LENGTH_LONG).show();
@@ -86,9 +78,6 @@ public class LoginSignUpFragment extends Fragment {
                             }
                         }
                     });
-//                } else{
-//                    Toast.makeText(getActivity(), "No Network Connection!", Toast.LENGTH_SHORT).show();
-//                }
 
 
 
