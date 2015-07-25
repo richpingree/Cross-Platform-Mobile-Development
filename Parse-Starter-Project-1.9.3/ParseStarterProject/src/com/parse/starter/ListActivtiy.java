@@ -1,7 +1,10 @@
 package com.parse.starter;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 
 import com.parse.ParseObject;
@@ -51,5 +54,16 @@ public class ListActivtiy extends Activity implements ListFragment.HeroListener{
         Intent addIntent = new Intent(this, HeroFormActivity.class);
         startActivityForResult(addIntent, ADDREQUEST);
 
+    }
+
+    @Override
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        if (netInfo != null && netInfo.isConnectedOrConnecting()){
+            return true;
+        }else {
+            return false;
+        }
     }
 }

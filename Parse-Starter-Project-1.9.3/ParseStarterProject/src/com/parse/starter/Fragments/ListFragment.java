@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.ParseObject;
 import com.parse.ParseQueryAdapter;
@@ -41,6 +42,7 @@ public class ListFragment extends Fragment{
 
     public interface HeroListener{
         public void addHero();
+        public boolean isOnline();
     }
 
     public ListFragment(){
@@ -109,31 +111,35 @@ public class ListFragment extends Fragment{
     }
 
     public void updateList() throws IOException{
-        mainAdapter = new ParseQueryAdapter<ParseObject>(getActivity(), "Hero");
-        mainAdapter.setTextKey("Name");
+        if (mListener.isOnline()) {
+            mainAdapter = new ParseQueryAdapter<ParseObject>(getActivity(), "Hero");
+            mainAdapter.setTextKey("Name");
 
-        heroListView.setAdapter(mainAdapter);
-        mainAdapter.loadObjects();
+            heroListView.setAdapter(mainAdapter);
+            mainAdapter.loadObjects();
 
-        heroListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            heroListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                selectedObject = mainAdapter.getItem(position);
-                String currentName = selectedObject.getString("Name");
-                String currentId = selectedObject.getString("Id");
-                int currentYear = selectedObject.getInt("Year");
-                String currentObjectId = selectedObject.getObjectId();
+                    selectedObject = mainAdapter.getItem(position);
+                    String currentName = selectedObject.getString("Name");
+                    String currentId = selectedObject.getString("Id");
+                    int currentYear = selectedObject.getInt("Year");
+                    String currentObjectId = selectedObject.getObjectId();
 
-                Intent detailIntent = new Intent(getActivity(), DetailActivity.class);
-                detailIntent.putExtra(HERONAME, currentName);
-                detailIntent.putExtra(HEROID, currentId);
-                detailIntent.putExtra(HEROYEAR, currentYear);
-                detailIntent.putExtra(OBJECTID, currentObjectId);
-                startActivity(detailIntent);
+                    Intent detailIntent = new Intent(getActivity(), DetailActivity.class);
+                    detailIntent.putExtra(HERONAME, currentName);
+                    detailIntent.putExtra(HEROID, currentId);
+                    detailIntent.putExtra(HEROYEAR, currentYear);
+                    detailIntent.putExtra(OBJECTID, currentObjectId);
+                    startActivity(detailIntent);
 
-            }
-        });
+                }
+            });
+        }else{
+            Toast.makeText(getActivity(), "NO Network Connection!", Toast.LENGTH_SHORT).show();
+        }
 
     }
 }

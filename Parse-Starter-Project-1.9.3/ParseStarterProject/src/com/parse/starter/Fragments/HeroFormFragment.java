@@ -47,6 +47,7 @@ public class HeroFormFragment extends Fragment {
         cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                getActivity().finish();
 
             }
         });
