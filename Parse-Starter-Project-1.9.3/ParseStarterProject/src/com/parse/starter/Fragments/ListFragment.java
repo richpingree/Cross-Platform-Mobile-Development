@@ -34,7 +34,7 @@ public class ListFragment extends Fragment{
     public static final String OBJECTID = "Object ID";
     private HeroListener mListener;
     TextView userTxt;
-    Button logoutBtn, addBtn;
+    Button logoutBtn, addBtn, refreshBtn;
     ListView heroListView;
     ParseQueryAdapter<ParseObject> mainAdapter;
     ParseObject selectedObject;
@@ -106,6 +106,19 @@ public class ListFragment extends Fragment{
             public void onClick(View v) {
                 mListener.addHero();
 
+            }
+        });
+
+        refreshBtn = (Button)getView().findViewById(R.id.refreshBtn);
+
+        refreshBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    updateList();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }

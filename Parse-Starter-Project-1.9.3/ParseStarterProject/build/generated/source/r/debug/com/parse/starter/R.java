@@ -23,20 +23,21 @@ public final class R {
         public static final int detailName=0x7f050001;
         public static final int detailYear=0x7f050003;
         public static final int heroId=0x7f050007;
-        public static final int heroList=0x7f05000e;
+        public static final int heroList=0x7f05000f;
         public static final int heroName=0x7f050006;
         public static final int heroYear=0x7f050008;
-        public static final int item1=0x7f050015;
-        public static final int item2=0x7f050016;
-        public static final int loginBtn=0x7f050013;
+        public static final int item1=0x7f050016;
+        public static final int item2=0x7f050017;
+        public static final int loginBtn=0x7f050014;
         public static final int logoutBtn=0x7f05000c;
-        public static final int password=0x7f050012;
-        public static final int passwordLabel=0x7f050011;
+        public static final int password=0x7f050013;
+        public static final int passwordLabel=0x7f050012;
+        public static final int refreshBtn=0x7f05000e;
         public static final int saveBtn=0x7f05000a;
-        public static final int signUpBtn=0x7f050014;
+        public static final int signUpBtn=0x7f050015;
         public static final int updateBtn=0x7f050004;
-        public static final int username=0x7f050010;
-        public static final int usernameLabel=0x7f05000f;
+        public static final int username=0x7f050011;
+        public static final int usernameLabel=0x7f050010;
     }
     public static final class layout {
         public static final int detail_activity=0x7f030000;

@@ -26,6 +26,12 @@
             android:id="@+id/addBtn"
             android:text="Add Hero"/>
 
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/refreshBtn"
+            android:text="Refresh Data"/>
+
     </TableLayout>
 
     <ListView
