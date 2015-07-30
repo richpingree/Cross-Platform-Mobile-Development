@@ -40,6 +40,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="oW6-Og-DX9" kind="show" identifier="detailsSegue" id="QtV-uB-YGv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -101,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="1070" y="402"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="cH7-Zg-itb">
             <objects>
-                <viewController id="oW6-Og-DX9" sceneMemberID="viewController">
+                <viewController id="oW6-Og-DX9" customClass="DetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CaP-8m-HKL"/>
                         <viewControllerLayoutGuide type="bottom" id="j2J-CY-24H"/>
@@ -112,6 +115,27 @@
                     <view key="view" contentMode="scaleToFill" id="3Va-tB-wVt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hero Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lAk-in-n0q">
+                                <rect key="frame" x="10" y="100" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hero Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gah-Z9-9SL">
+                                <rect key="frame" x="10" y="137" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Waf-5s-J7K">
+                                <rect key="frame" x="137" y="190" width="46" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SaveButton:" destination="BpS-3U-ZbI" eventType="touchUpInside" id="dCc-6F-el3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>

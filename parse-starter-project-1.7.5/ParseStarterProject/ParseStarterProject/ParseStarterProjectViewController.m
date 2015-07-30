@@ -6,6 +6,7 @@
 
 #import "ParseStarterProjectViewController.h"
 #import "Reachability.h"
+#import "DetailsViewController.h"
 
 #import <Parse/Parse.h>
 
@@ -107,5 +108,9 @@
         cell.detailTextLabel.text = [tempObject objectForKey:@"Id"];
     }
     return cell;
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
 }
 @end

@@ -40,7 +40,7 @@
     hero[@"Id"] = _heroId.text;
     hero[@"User"] = [NSString stringWithFormat:@"%@",[[PFUser currentUser]valueForKey:@"username"]];
     
-    [hero saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [hero saveEventually:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             
             _heroName.text = nil;
