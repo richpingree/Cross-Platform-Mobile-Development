@@ -5,6 +5,7 @@
 //
 
 #import "ParseStarterProjectViewController.h"
+#import "Reachability.h"
 
 #import <Parse/Parse.h>
 
@@ -17,9 +18,19 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     
-    
-    [self performSelector:@selector(retrieveFromParse)];
     [super viewDidLoad];
+    
+    NSLog(@"Array length: %lu", (unsigned long)objectArray.count);
+    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+    if (networkStatus == NotReachable) {
+        NSLog(@"No Network Found");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Connection Found!" message:@"please try again later" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }else{
+        NSLog(@"Connected to Network");
+        [self performSelector:@selector(retrieveFromParse)];
+    }
 }
 
 - (void) retrieveFromParse{
@@ -65,13 +76,18 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [objectArray removeObjectAtIndex:indexPath.row];
         
-//        PFObject *tempObject = [objectArray objectAtIndex:indexPath.row];
+        PFObject *tempObject = [objectArray objectAtIndex:indexPath.row];
 //
 //        [tempObject deleteInBackgroundWithBlock:^(BOOL successed, NSError *error){
 //            
 //        }];
         
+        
         [tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        PFQuery *query = [PFQuery queryWithClassName:@"Hero"];
+        PFObject *object = [query getObjectWithId:tempObject.objectId];
+        [object delete];
         }
 }
 
