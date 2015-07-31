@@ -1,18 +1,18 @@
 //
-//  DetailsViewController.m
+//  DetailViewController.m
 //  ParseStarterProject
 //
 //  Created by Richard Pingree on 7/30/15.
 //
 //
 
-#import "DetailsViewController.h"
+#import "DetailViewController.h"
 
-@interface DetailsViewController ()
+@interface DetailViewController ()
 
 @end
 
-@implementation DetailsViewController
+@implementation DetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,4 +34,6 @@
 }
 */
 
+- (IBAction)Save:(id)sender {
+}
 @end

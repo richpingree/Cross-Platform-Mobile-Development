@@ -6,7 +6,7 @@
 
 #import "ParseStarterProjectViewController.h"
 #import "Reachability.h"
-#import "DetailsViewController.h"
+#import "DetailViewController.h"
 
 #import <Parse/Parse.h>
 
@@ -111,6 +111,25 @@
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    DetailViewController *detailViewController = segue.destinationViewController;
+    if (detailViewController != nil) {
+        UITableViewCell *cell = (UITableViewCell*)sender;
+        NSIndexPath *indexPath =[myTableView indexPathForCell:cell];
+        
+        PFObject *tempObject = [objectArray objectAtIndex:indexPath.row];
+        
+        NSString *nameString = [tempObject objectForKey:@"Name"];
+        NSString *idString = [tempObject objectForKey:@"Id"];
+        NSString *objectIdString = [tempObject objectId];
+        
+       // NSLog(@"Test: %@", nameString);
+        detailViewController.nameString = nameString;
+        detailViewController.idString =idString;
+        detailViewController.objectIdString = objectIdString;
+    
+        
+    }
     
 }
 @end

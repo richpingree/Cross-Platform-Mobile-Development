@@ -23,7 +23,7 @@
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
 		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
 		701842CA1B6A948000E13FA4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 701842C91B6A948000E13FA4 /* Reachability.m */; };
-		701842CD1B6ADBA200E13FA4 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 701842CC1B6ADBA200E13FA4 /* DetailsViewController.m */; };
+		701842D01B6B04C200E13FA4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 701842CF1B6B04C200E13FA4 /* DetailViewController.m */; };
 		707FA6521B59C0F2003DF272 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 707FA6511B59C0F2003DF272 /* AddViewController.m */; };
 		70CE562D1B5728C3003588E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70CE562C1B5728C3003588E3 /* Main.storyboard */; };
 		70CE56711B589280003588E3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CE56701B589280003588E3 /* LoginViewController.m */; };
@@ -69,8 +69,8 @@
 		6372FF571613CC47002132AF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		701842C81B6A948000E13FA4 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		701842C91B6A948000E13FA4 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		701842CB1B6ADBA200E13FA4 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
-		701842CC1B6ADBA200E13FA4 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		701842CE1B6B04C200E13FA4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		701842CF1B6B04C200E13FA4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		707FA6501B59C0F2003DF272 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		707FA6511B59C0F2003DF272 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		70CE562C1B5728C3003588E3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
@@ -165,8 +165,8 @@
 				70CE56701B589280003588E3 /* LoginViewController.m */,
 				707FA6501B59C0F2003DF272 /* AddViewController.h */,
 				707FA6511B59C0F2003DF272 /* AddViewController.m */,
-				701842CB1B6ADBA200E13FA4 /* DetailsViewController.h */,
-				701842CC1B6ADBA200E13FA4 /* DetailsViewController.m */,
+				701842CE1B6B04C200E13FA4 /* DetailViewController.h */,
+				701842CF1B6B04C200E13FA4 /* DetailViewController.m */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -298,9 +298,9 @@
 				70CE56711B589280003588E3 /* LoginViewController.m in Sources */,
 				09ABC07F13A1D52D009C3FCF /* main.m in Sources */,
 				09ABC08213A1D52D009C3FCF /* ParseStarterProjectAppDelegate.m in Sources */,
-				701842CD1B6ADBA200E13FA4 /* DetailsViewController.m in Sources */,
 				701842CA1B6A948000E13FA4 /* Reachability.m in Sources */,
 				09ABC08813A1D52E009C3FCF /* ParseStarterProjectViewController.m in Sources */,
+				701842D01B6B04C200E13FA4 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
