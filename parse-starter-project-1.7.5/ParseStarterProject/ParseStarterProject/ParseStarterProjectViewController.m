@@ -21,7 +21,8 @@
     
     [super viewDidLoad];
     
-    NSLog(@"Array length: %lu", (unsigned long)objectArray.count);
+    objectArray = [NSMutableArray new];
+    
     Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
     if (networkStatus == NotReachable) {
@@ -31,6 +32,8 @@
     }else{
         NSLog(@"Connected to Network");
         [self performSelector:@selector(retrieveFromParse)];
+        
+
     }
 }
 
@@ -42,6 +45,8 @@
         
         if (!error) {
             objectArray = [[NSMutableArray alloc] initWithArray:objects];
+            NSLog(@"Array length: %lu", (unsigned long)[objectArray count]);
+            
         }
         [myTableView reloadData];
     }];
@@ -77,24 +82,21 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [objectArray removeObjectAtIndex:indexPath.row];
         
-        PFObject *tempObject = [objectArray objectAtIndex:indexPath.row];
-//
-//        [tempObject deleteInBackgroundWithBlock:^(BOOL successed, NSError *error){
-//            
-//        }];
+//        PFObject *tempObject = [objectArray objectAtIndex:indexPath.row];        
+//        [tempObject deleteInBackground];
         
         
         [tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         
-        PFQuery *query = [PFQuery queryWithClassName:@"Hero"];
-        PFObject *object = [query getObjectWithId:tempObject.objectId];
-        [object delete];
+//        PFQuery *query = [PFQuery queryWithClassName:@"Hero"];
+//        PFObject *object = [query getObjectWithId:tempObject.objectId];
+//        [object delete];
         }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return objectArray.count;
+    return [objectArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
