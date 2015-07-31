@@ -134,46 +134,6 @@
         
     }
 
-//    if ([[segue identifier] isEqualToString:@"detailSegue"]) {
-//            DetailViewController *detailViewController = segue.destinationViewController;
-//            if (detailViewController != nil) {
-//                UITableViewCell *cell = (UITableViewCell*)sender;
-//                NSIndexPath *indexPath =[myTableView indexPathForCell:cell];
-//        
-//                PFObject *tempObject = [objectArray objectAtIndex:indexPath.row];
-//        
-//                NSString *heroNameString = [tempObject objectForKey:@"Name"];
-//                NSString *idString = [tempObject objectForKey:@"Id"];
-//                NSString *objectIdString = [tempObject objectId];
-//        
-//                NSLog(@"Test: %@", heroNameString);
-//                detailViewController.nameString = heroNameString;
-//                //detailViewController.idString =idString;
-//                //detailViewController.objectIdString = objectIdString;
-//        
-//        
-//            }
-//
-//    }
-    
-//    DetailViewController *detailViewController = segue.destinationViewController;
-//    if (detailViewController != nil) {
-//        UITableViewCell *cell = (UITableViewCell*)sender;
-//        NSIndexPath *indexPath =[myTableView indexPathForCell:cell];
-//        
-//        PFObject *tempObject = [objectArray objectAtIndex:indexPath.row];
-//        
-//        NSString *nameString = [tempObject objectForKey:@"Name"];
-//        NSString *idString = [tempObject objectForKey:@"Id"];
-//        NSString *objectIdString = [tempObject objectId];
-//        
-//       // NSLog(@"Test: %@", nameString);
-//        detailViewController.nameString = nameString;
-//        detailViewController.idString =idString;
-//        detailViewController.objectIdString = objectIdString;
-//
-//
-//    }
     
 }
 @end
