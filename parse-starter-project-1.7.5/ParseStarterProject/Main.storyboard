@@ -92,7 +92,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <segue destination="BpS-3U-ZbI" kind="show" identifier="AddSegue" id="bCg-8L-ivO"/>
+                                <segue destination="Rw3-ls-ihx" kind="show" id="Qsl-AW-pfg"/>
                             </connections>
                         </button>
                     </navigationItem>
@@ -103,6 +103,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tbd-IB-xN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1070" y="402"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jlq-FH-WcS">
+            <objects>
+                <viewController id="Rw3-ls-ihx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="66e-qS-GQp"/>
+                        <viewControllerLayoutGuide type="bottom" id="qab-yy-R8j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gAB-Ko-u8r">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFM-k9-Jfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1091" y="1135"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="cH7-Zg-itb">
@@ -133,7 +151,6 @@
                                 </state>
                                 <connections>
                                     <action selector="Save:" destination="oW6-Og-DX9" eventType="touchUpInside" id="MyU-KQ-p7n"/>
-                                    <action selector="SaveButton:" destination="BpS-3U-ZbI" eventType="touchUpInside" id="dCc-6F-el3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -146,50 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4a8-6j-Xmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1065" y="1167"/>
-        </scene>
-        <!--Add View Controller-->
-        <scene sceneID="Y7K-Xf-Wwb">
-            <objects>
-                <viewController id="BpS-3U-ZbI" customClass="AddViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tB4-aA-FDk"/>
-                        <viewControllerLayoutGuide type="bottom" id="in6-sb-fvB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oTt-3n-nbM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hero Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0h-rU-H82">
-                                <rect key="frame" x="10" y="100" width="300" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hero Identity" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kjv-wo-rMn">
-                                <rect key="frame" x="10" y="137" width="300" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyJ-Oa-Hg3">
-                                <rect key="frame" x="137" y="190" width="46" height="30"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="SaveButton:" destination="BpS-3U-ZbI" eventType="touchUpInside" id="kyv-Ld-0bB"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <connections>
-                        <outlet property="heroId" destination="Kjv-wo-rMn" id="jcu-k4-k5Y"/>
-                        <outlet property="heroName" destination="h0h-rU-H82" id="Aq4-pu-qxK"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i3f-N5-ueX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1832" y="427"/>
+            <point key="canvasLocation" x="341" y="1135"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="jv3-dg-cfa">
